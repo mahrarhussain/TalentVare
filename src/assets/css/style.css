@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: "NeueHaasDisplay";
+    src: url("../fonts/NeueHaasGroteskDisplayPro.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "NeueHaasDisplay";
+    src: url("../fonts/NeueHaasGroteskDisplayPro-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+    font-family: "NeueHaasDisplay", sans-serif;
+}
+
+
+.primary-btn {
+    background-color: #0154aa;
+}
+
+.profile-header {
+    position: relative;
+}
+
+
+
+.profile-background {
+    width: 100%;
+    height: 6rem;
+    object-fit: cover;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+.profile-picture {
+    position: absolute;
+    bottom: -2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 0.25rem solid white;
+    border-radius: 50%;
+}
+
+.profile-info {
+    text-align: center;
+    padding-left: 1rem;
+}
+
+.profile-stats {
+    padding: 1rem;
+}
+
+.profile-calendar {
+    padding: 1rem;
+}
+
+
+.main-container {
+    background-color: #f4f4f4;
+}
+
+
+.job-container button {
+    background-color: #0154aa;
+}
+
+
+@media (max-width: 1060px) {
+    nav a {
+        font-size: 12px;
+    }
+}
