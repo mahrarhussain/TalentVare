@@ -70,7 +70,7 @@ const Main = () => {
               <span>Search</span>
             </button>
           </div>
-          <div className="mt-4 flex flex-wrap space-x-4">
+          <div className="mt-4 flex flex-wrap gap-x-4 gap-y-2">
             <button className="rounded px-4 py-2 text-gray-600">
               Similar :
             </button>
@@ -84,6 +84,7 @@ const Main = () => {
               Graphic Designer
             </button>
           </div>
+
           <div className="mt-8">
             <h2 className="text-xl font-bold">
               Featured Jobs{" "}

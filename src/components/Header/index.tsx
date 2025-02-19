@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { LOGO, PROFILE_ICON } from "../../assets/images";
 
 const Header = () => {
@@ -63,47 +63,53 @@ const Header = () => {
           />
         </div>
       </div>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{
+              opacity: 0,
+              height: 0,
+              transition: { duration: 0.4, ease: "easeInOut" },
+            }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="lg:hidden bg-white shadow-md overflow-hidden"
+          >
+            <nav className="nav py-3 space-y-4 grid justify-center">
+              <a href="#" className="block  text-[#0154aa] font-bold">
+                Find Jobs
+              </a>
+              <a href="#" className="block  text-[#737a91]">
+                Top Companies
+              </a>
+              <a href="#" className="block  text-[#737a91]">
+                Job Tracker
+              </a>
+              <a href="#" className="block  text-[#737a91]">
+                My Calendar
+              </a>
+              <a href="#" className="block  text-[#737a91]">
+                Documents
+              </a>
+              <a href="#" className="block  text-[#737a91]">
+                Messages
+              </a>
+              <a href="#" className="block  text-[#737a91]">
+                Notifications
+              </a>
+            </nav>
 
-      {isOpen && (
-        <motion.div
-          initial={{ opacity: 0, height: 0 }}
-          animate={{ opacity: 1, height: "auto" }}
-          exit={{ opacity: 0, height: 0 }}
-          className="lg:hidden bg-white shadow-md"
-        >
-          <nav className="nav py-3 space-y-4 grid justify-center">
-            <a href="#" className="block  text-[#0154aa] font-bold">
-              Find Jobs
-            </a>
-            <a href="#" className="block  text-[#737a91]">
-              Top Companies
-            </a>
-            <a href="#" className="block  text-[#737a91]">
-              Job Tracker
-            </a>
-            <a href="#" className="block  text-[#737a91]">
-              My Calendar
-            </a>
-            <a href="#" className="block  text-[#737a91]">
-              Documents
-            </a>
-            <a href="#" className="block  text-[#737a91]">
-              Messages
-            </a>
-            <a href="#" className="block  text-[#737a91]">
-              Notifications
-            </a>
-          </nav>
-
-          <div className="flex items-center justify-center py-4">
-            <img
-              src={PROFILE_ICON}
-              alt="User Avatar"
-              className="h-12 w-12 rounded-full"
-            />
-          </div>
-        </motion.div>
-      )}
+            <div className="flex items-center justify-center py-4">
+              <img
+                src={PROFILE_ICON}
+                alt="User Avatar"
+                className="h-12 w-12 rounded-full"
+              />
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 };
