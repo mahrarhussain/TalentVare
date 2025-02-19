@@ -88,7 +88,7 @@ const Main = () => {
           <div className="mt-8">
             <h2 className="text-xl font-bold">
               Featured Jobs{" "}
-              <a href="#" className="text-[#0154aa]">
+              <a href="#" className="text-[#0154aa] text-base">
                 See Featured Jobs
               </a>
             </h2>
@@ -101,7 +101,7 @@ const Main = () => {
           <div className="mt-8">
             <h2 className="text-xl font-bold">
               Recommended Jobs{" "}
-              <a href="#" className="text-[#0154aa]">
+              <a href="#" className="text-[#0154aa] text-base">
                 See Recommended Jobs
               </a>
             </h2>
